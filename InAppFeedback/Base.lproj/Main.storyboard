@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4511" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3745"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7dR-Lh-gWr"/>
+                        <viewControllerLayoutGuide type="bottom" id="B07-ah-vsa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wcl-hp-uqO">
+                                <rect key="frame" x="8" y="76" width="305" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="I love this app!"/>
+                                    <segment title="I have a problem."/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sM-Ti-t3Y">
+                                <rect key="frame" x="8" y="221" width="305" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="YLa-MA-oBd"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmM-GU-oMw">
+                                <rect key="frame" x="8" y="281" width="305" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Send feedback">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPushSend:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AiO-mO-vNq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know what you think!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdw-H1-sJV">
+                                <rect key="frame" x="8" y="37" width="305" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Loo-6c-hrY">
+                                <rect key="frame" x="8" y="152" width="305" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="K6p-v6-IdG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Rt1-vJ-6ap"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail address:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="305" translatesAutoresizingMaskIntoConstraints="NO" id="zuX-7Z-2mj">
+                                <rect key="frame" x="8" y="116" width="305" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your comment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed4-kr-TlG">
+                                <rect key="frame" x="8" y="197" width="251" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pml-hc-ZMP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gdw-H1-sJV" firstAttribute="top" secondItem="7dR-Lh-gWr" secondAttribute="bottom" constant="17" id="0um-70-B4v"/>
+                            <constraint firstItem="Loo-6c-hrY" firstAttribute="top" secondItem="wcl-hp-uqO" secondAttribute="bottom" constant="48" id="15F-DX-Got"/>
+                            <constraint firstItem="zuX-7Z-2mj" firstAttribute="top" secondItem="wcl-hp-uqO" secondAttribute="bottom" constant="12" id="3Fi-fs-J77"/>
+                            <constraint firstItem="zuX-7Z-2mj" firstAttribute="trailing" secondItem="Loo-6c-hrY" secondAttribute="trailing" id="4H6-hK-ED2"/>
+                            <constraint firstItem="wcl-hp-uqO" firstAttribute="leading" secondItem="zuX-7Z-2mj" secondAttribute="leading" id="6O1-21-fzT"/>
+                            <constraint firstItem="Ed4-kr-TlG" firstAttribute="leading" secondItem="Loo-6c-hrY" secondAttribute="leading" id="7o1-RF-RlL"/>
+                            <constraint firstAttribute="trailing" secondItem="Ed4-kr-TlG" secondAttribute="trailing" constant="61" id="83j-xZ-npc"/>
+                            <constraint firstItem="RmM-GU-oMw" firstAttribute="leading" secondItem="6sM-Ti-t3Y" secondAttribute="leading" id="ASh-Et-0U5"/>
+                            <constraint firstItem="wcl-hp-uqO" firstAttribute="leading" secondItem="Gdw-H1-sJV" secondAttribute="leading" id="Adz-Vo-M0E"/>
+                            <constraint firstItem="wcl-hp-uqO" firstAttribute="trailing" secondItem="zuX-7Z-2mj" secondAttribute="trailing" id="Cqg-I4-eEN"/>
+                            <constraint firstItem="Loo-6c-hrY" firstAttribute="leading" secondItem="zuX-7Z-2mj" secondAttribute="leading" id="D8u-li-ddE"/>
+                            <constraint firstItem="B07-ah-vsa" firstAttribute="top" secondItem="RmM-GU-oMw" secondAttribute="bottom" constant="254" id="DIb-ku-ogU"/>
+                            <constraint firstItem="zuX-7Z-2mj" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="McB-2b-Zo6"/>
+                            <constraint firstItem="Gdw-H1-sJV" firstAttribute="trailing" secondItem="wcl-hp-uqO" secondAttribute="trailing" id="SmF-Hx-vWj"/>
+                            <constraint firstItem="6sM-Ti-t3Y" firstAttribute="leading" secondItem="Ed4-kr-TlG" secondAttribute="leading" id="X9l-NE-02M"/>
+                            <constraint firstItem="6sM-Ti-t3Y" firstAttribute="top" secondItem="Ed4-kr-TlG" secondAttribute="bottom" constant="3" id="dKQ-ep-HTI"/>
+                            <constraint firstItem="6sM-Ti-t3Y" firstAttribute="trailing" secondItem="Loo-6c-hrY" secondAttribute="trailing" id="dmE-B9-RJe"/>
+                            <constraint firstItem="Ed4-kr-TlG" firstAttribute="top" secondItem="zuX-7Z-2mj" secondAttribute="bottom" constant="37" id="hqT-qU-Ivo"/>
+                            <constraint firstItem="Gdw-H1-sJV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="8" id="mUf-jb-ndS"/>
+                            <constraint firstItem="Ed4-kr-TlG" firstAttribute="top" secondItem="Loo-6c-hrY" secondAttribute="bottom" constant="10" id="pxN-mD-yIV"/>
+                            <constraint firstItem="6sM-Ti-t3Y" firstAttribute="trailing" secondItem="RmM-GU-oMw" secondAttribute="trailing" id="u2D-Ln-6uP"/>
+                            <constraint firstItem="RmM-GU-oMw" firstAttribute="top" secondItem="6sM-Ti-t3Y" secondAttribute="bottom" constant="8" symbolic="YES" id="wsv-wi-u0P"/>
+                            <constraint firstItem="wcl-hp-uqO" firstAttribute="top" secondItem="Gdw-H1-sJV" secondAttribute="bottom" constant="18" id="ykw-d7-4NH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="wcl-hp-uqO" id="Td3-OF-0gW"/>
+                        <outlet property="textComments" destination="6sM-Ti-t3Y" id="neG-ma-fob"/>
+                        <outlet property="textEmail" destination="Loo-6c-hrY" id="19g-eb-5Cu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
