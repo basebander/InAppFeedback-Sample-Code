@@ -1,7 +1,7 @@
 <?php
  
 //Change the e-mail address (Line 24) & place this file on your webserver.
-//For example: http://www.yourdomain.com/feedback.php
+//For example: http://test/feedback.php
 //Then post data to it.
  
 // Retrieve variables
